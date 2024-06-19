@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Simon</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Press+Start+2P"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Forum&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <h1 id="level-title">Press A Key to Start</h1>
+    <div class="container">
+      <div class="row">
+        <div type="button" id="green" class="btn green"></div>
+
+        <div type="button" id="red" class="btn red"></div>
+      </div>
+
+      <div class="row">
+        <div type="button" id="yellow" class="btn yellow"></div>
+        <div type="button" id="blue" class="btn blue"></div>
+      </div>
+    </div>
+    <div class="game-rules">
+      <h2>Simon Game Rules</h2>
+      1. Start of the Game: The game begins by displaying the first color in the
+      sequence. For example, the game may show the color blue.<br />
+      2. User Input:The player must click on the button that corresponds to the
+      color shown (e.g., click on the blue button).<br />
+      3. Sequence Progression: The game then shows the next color in the
+      sequence. The player must remember the sequence and input it correctly.
+      For instance, if the sequence is now blue, red, the player must first
+      click on the blue button and then the red button.<br />
+      4. Increasing Difficulty: After each successful input of the current
+      sequence, the game adds an additional color to the end of the sequence.
+      The player must remember and repeat the entire sequence each time, which
+      grows progressively longer.<br />
+      5. Game Over Condition: If the player clicks the buttons in the wrong
+      order or selects an incorrect color, the game ends. <br />
+      6. Objective: The objective is to correctly remember and input the growing
+      sequence of colors for as long as possible. <br />
+      7. Restart: After a game over, the player can start a new game, which will
+      begin again with a single color.<br />
+    </div>
+
+    <script src="./game.js"></script>
+  </body>
+</html>
