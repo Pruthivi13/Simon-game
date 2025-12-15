@@ -1,0 +1,117 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-family: 'Press Start 2P', cursive;
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  color: #fef2bf;
+  margin: 0;
+  text-shadow: 0 0 20px rgba(254, 242, 191, 0.3);
+  transition: all 0.3s ease;
+}
+
+.title.game-over {
+  color: #ff4757;
+  animation: shake 0.5s ease-in-out;
+  text-shadow: 0 0 20px rgba(255, 71, 87, 0.5);
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-10px); }
+  40%, 80% { transform: translateX(10px); }
+}
+
+.subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  color: rgba(254, 242, 191, 0.7);
+  margin: 15px 0 0 0;
+  letter-spacing: 0.5px;
+}
+
+/* Main Content */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Start Button */
+.start-btn {
+  margin-top: 25px;
+  padding: 18px 35px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: clamp(0.7rem, 2vw, 0.9rem);
+  color: #1a1a2e;
+  background: linear-gradient(135deg, #fef2bf 0%, #f0d78c 100%);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(254, 242, 191, 0.3);
+}
+
+.start-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(254, 242, 191, 0.4);
+}
+
+.start-btn:active {
+  transform: translateY(0);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+}
+
+.footer p {
+  color: rgba(254, 242, 191, 0.5);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 480px) {
+  .app {
+    padding: 15px 10px;
+  }
+
+  .header {
+    margin-bottom: 15px;
+  }
+
+  .subtitle {
+    margin-top: 10px;
+  }
+
+  .start-btn {
+    padding: 15px 28px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-height: 700px) {
+  .header {
+    margin-bottom: 10px;
+  }
+
+  .footer {
+    padding: 10px;
+  }
+}

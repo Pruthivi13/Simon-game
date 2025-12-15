@@ -1,0 +1,77 @@
+.game-rules {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.rules-toggle {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  color: #fef2bf;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.rules-toggle:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+  font-size: 0.7rem;
+}
+
+.arrow.open {
+  transform: rotate(180deg);
+}
+
+.rules-list {
+  margin-top: 15px;
+  padding: 20px 25px 20px 40px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  list-style-type: decimal;
+  text-align: left;
+}
+
+.rules-list li {
+  color: rgba(254, 242, 191, 0.9);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 12px;
+  font-family: 'Inter', sans-serif;
+}
+
+.rules-list li:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 480px) {
+  .game-rules {
+    margin: 20px auto;
+    padding: 0 15px;
+  }
+
+  .rules-toggle {
+    font-size: 0.65rem;
+    padding: 12px 15px;
+  }
+
+  .rules-list {
+    padding: 15px 15px 15px 35px;
+  }
+
+  .rules-list li {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+}
